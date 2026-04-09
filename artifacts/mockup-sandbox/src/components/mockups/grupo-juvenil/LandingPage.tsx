@@ -105,9 +105,7 @@ export function LandingPage() {
         <div className="container mx-auto px-4 flex items-center justify-between">
           <div className="flex items-center gap-2">
             <Flame className={`w-8 h-8 ${isScrolled ? "text-primary" : "text-secondary"}`} />
-            <span className={`font-bold text-xl tracking-tight ${isScrolled ? "text-slate-900" : "text-white"}`}>
-              Grupo Juvenil
-            </span>
+            <span className={`font-bold text-xl tracking-tight ${isScrolled ? "text-slate-900" : "text-white"}`}>Pandillas La Santa Cruz</span>
           </div>
 
           {/* Desktop Menu */}
@@ -131,7 +129,6 @@ export function LandingPage() {
           </button>
         </div>
       </nav>
-
       {/* Mobile Menu Overlay */}
       {mobileMenuOpen && (
         <div className="fixed inset-0 z-40 bg-white pt-24 px-4 flex flex-col gap-6 md:hidden">
@@ -142,7 +139,6 @@ export function LandingPage() {
           <Button size="lg" className="mt-4 w-full text-lg">Únete Hoy</Button>
         </div>
       )}
-
       {/* Floating WhatsApp Button */}
       <a 
         href="https://wa.me/523312345678" 
@@ -155,7 +151,6 @@ export function LandingPage() {
           Mándanos mensaje
         </span>
       </a>
-
       {/* HERO SECTION */}
       <header className="relative min-h-[100dvh] flex items-center justify-center overflow-hidden bg-slate-900">
         <div className="absolute inset-0 w-full h-full">
@@ -208,7 +203,6 @@ export function LandingPage() {
           </div>
         </div>
       </header>
-
       {/* UPCOMING EVENTS */}
       <section id="eventos" className="py-24 bg-slate-50 relative -mt-10 rounded-t-[3rem] z-20">
         <div className="container mx-auto px-4">
@@ -324,7 +318,6 @@ export function LandingPage() {
           </div>
         </div>
       </section>
-
       {/* ONBOARDING TIMELINE */}
       <section className="py-24 bg-primary text-white overflow-hidden relative">
         <div className="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3"></div>
@@ -367,7 +360,6 @@ export function LandingPage() {
           </div>
         </div>
       </section>
-
       {/* ACTIVITIES & MINISTRIES */}
       <section id="actividades" className="py-24 bg-white">
         <div className="container mx-auto px-4">
@@ -407,7 +399,6 @@ export function LandingPage() {
           </div>
         </div>
       </section>
-
       {/* IMAGE BREAK & TESTIMONIALS */}
       <section id="comunidad" className="py-24 bg-slate-900 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-1/2 h-full opacity-20 pointer-events-none">
@@ -452,7 +443,6 @@ export function LandingPage() {
           </div>
         </div>
       </section>
-
       {/* LEADERSHIP / COORDINATORS */}
       <section className="py-24 bg-slate-50">
         <div className="container mx-auto px-4">
@@ -484,7 +474,6 @@ export function LandingPage() {
           </div>
         </div>
       </section>
-
       {/* SCHEDULE & DOWNLOADS */}
       <section className="py-24 bg-white border-y border-slate-100">
         <div className="container mx-auto px-4 max-w-6xl">
@@ -555,7 +544,6 @@ export function LandingPage() {
           </div>
         </div>
       </section>
-
       {/* FOR PARENTS */}
       <section id="padres" className="py-20 bg-slate-900 text-white border-t-8 border-secondary">
         <div className="container mx-auto px-4 max-w-4xl text-center">
@@ -577,7 +565,6 @@ export function LandingPage() {
           </div>
         </div>
       </section>
-
       {/* CONTACT & FOOTER */}
       <footer className="bg-slate-950 pt-24 pb-12 text-white">
         <div className="container mx-auto px-4 max-w-6xl">
