@@ -1,0 +1,20 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "jiFGAAs76o20g4iWns6cy"
+uri = "file://artifacts/mockup-sandbox/public/images/hero.png"
+type = "image"
+title = "Joyful teenagers outdoor retreat"
+
+[[generated]]
+id = "RoNgdM_FRCIumTMWnFGg1"
+uri = "file://artifacts/mockup-sandbox/public/images/community.png"
+type = "image"
+title = "Youth community gathering"
+
+[[generated]]
+id = "CqLeG6Y41p2oANPdJZl6W"
+uri = "file://artifacts/mockup-sandbox/public/images/sports.png"
+type = "image"
+title = "Youth sports activities"

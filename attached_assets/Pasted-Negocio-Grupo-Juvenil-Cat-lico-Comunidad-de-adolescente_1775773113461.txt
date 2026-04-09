@@ -1,0 +1,178 @@
+Negocio: Grupo Juvenil Católico - Comunidad de adolescentes y retiros espirituales
+Construye un sitio web moderno y motivacional para un grupo de adolescentes de la parroquia, que ofrece reuniones formativas, dinámicas, retiros espirituales y actividades de convivencia en un ambiente sano, comunitario y lleno de energía.
+
+DISEÑO Y ESTÉTICA:
+
+Paleta energética y juvenil: azul vibrante, blanco puro, toques de amarillo/dorado para resaltar, y gris claro para fondos.
+
+Tipografía: Sans-serif bold y moderna para títulos, sans-serif limpia y legible para textos largos.
+
+Fotografía de alta energía mostrando comunidad: jóvenes riendo, cantando, en dinámicas de grupo y momentos de oración.
+
+Elementos gráficos: formas fluidas, líneas dinámicas, cruces estilizadas o símbolos juveniles.
+
+Animaciones fluidas que denoten movimiento y vida.
+
+HERO SECTION:
+
+Video background de retiros pasados, alabanzas y dinámicas (con fallback a imagen).
+
+Overlay oscuro (40% opacity) para legibilidad del texto.
+
+Headline impactante: "VIVE LA EXPERIENCIA, ENCUENTRA TU CAMINO"
+
+Subline motivacional: "Únete a una comunidad de jóvenes que buscan algo más grande"
+
+Tres CTAs destacados:
+
+"Inscríbete al próximo retiro" (botón principal de color vibrante)
+
+"Conoce nuestros horarios" (outline blanco)
+
+"Ver galería de videos" (ícono de play)
+
+Datos impactantes en badges: "Comunidad de adolescentes", "Retiros anuales", "Actividades deportivas y espirituales".
+
+INSCRIPCIONES A RETIROS Y EVENTOS (Reemplaza Membresías):
+
+Diseño de tarjetas para los próximos eventos o tipos de asistencia.
+
+Ejemplo de tarjetas:
+
+INSCRIPCIÓN BÁSICA: Acceso al retiro + comidas.
+
+INSCRIPCIÓN COMPLETA: Acceso al retiro + comidas + playera oficial del grupo.
+
+Cada tarjeta con:
+
+Nombre del evento/retiro en grande.
+
+Fechas y cuota de recuperación.
+
+Lista de lo que incluye.
+
+Botón "Inscribirse ahora".
+
+Característica técnica clave: Al completar la inscripción, el sistema debe generar y permitir la descarga automática de un PDF con la lista de cosas necesarias (ropa, Biblia, sleeping bag, etc.) y la carta responsiva.
+
+ACTIVIDADES Y MINISTERIOS (Reemplaza Clases):
+
+Grid de tarjetas mostrando lo que se hace en el grupo:
+
+Reuniones de Formación
+
+Dinámicas y Juegos
+
+Ministerio de Música / Coro
+
+Deportes (Fútbol, Basquetbol)
+
+Servicio a la Comunidad
+
+Cada tarjeta con ícono, descripción breve, a quién va dirigido y duración promedio.
+
+Hover: scale up y fotos del ministerio en acción.
+
+CALENDARIO DE REUNIONES Y EVENTOS:
+
+Calendario interactivo visual.
+
+Muestra los días de reuniones semanales, misas de jóvenes y fechas importantes.
+
+Clic en el evento abre modal con detalles (hora, lugar dentro de la parroquia, qué llevar).
+
+COORDINADORES Y GUÍAS (Reemplaza Entrenadores):
+
+Grid de cards de los líderes del grupo (Coordinador, Sub-coordinador, etc.).
+
+Foto amigable de cada guía.
+
+Información visible: Nombre, rol en el grupo, años de experiencia.
+
+Hover: biografía breve sobre por qué les gusta servir en el grupo y redes sociales oficiales.
+
+NUESTROS ESPACIOS / LA PARROQUIA:
+
+Galería full-width tipo slider o grid.
+
+Fotos de: Salones de reunión, el templo, las canchas deportivas, áreas comunes.
+
+Listado de amenidades o espacios seguros para los jóvenes.
+
+TESTIMONIOS Y VIVENCIAS:
+
+Sección de historias de conversión o de experiencia en la comunidad.
+
+Slider con fotos de miembros actuales.
+
+Cada testimonio con: Nombre, edad, tiempo en el grupo y un mensaje breve sobre cómo el grupo le ha ayudado en su vida.
+
+Video testimoniales de retiros pasados embebidos (Links a YouTube/TikTok).
+
+TU PRIMER DÍA CON NOSOTROS (Onboarding):
+
+Timeline visual para los nuevos:
+
+Contáctanos por WhatsApp.
+
+Asiste a tu primera reunión sabatina.
+
+Intégrate a una pequeña comunidad.
+
+¡Vive tu primer retiro!
+
+CTA: "Mándanos un mensaje hoy"
+
+RECURSOS Y DESCARGAS (Reemplaza App Móvil):
+
+Sección para descargar material útil:
+
+Cantoral del grupo (PDF).
+
+Permisos para padres de familia.
+
+Oraciones principales.
+
+Formato tipo biblioteca digital fácil de usar desde el celular.
+
+INFORMACIÓN PARA PADRES (Sección Nueva de Confianza):
+
+Bloque dedicado a los papás para dar tranquilidad.
+
+Explicación de la supervisión, valores católicos fomentados y ambiente seguro.
+
+Botón de contacto directo para dudas de padres de familia.
+
+UBICACIÓN Y REDES SOCIALES (Contacto):
+
+Mapa embebido de Google Maps con la ubicación exacta en El Salto.
+
+Información destacada:
+
+Dirección de la parroquia.
+
+WhatsApp directo del grupo.
+
+Horarios de las reuniones.
+
+Enlaces gigantes a sus redes: Instagram, TikTok (para los videos), Facebook.
+
+Formulario de contacto con campos: Nombre del joven, Edad, Nombre del tutor (si aplica), Teléfono de emergencia.
+
+PROMOCIÓN DESTACADA:
+
+Banner del "PRÓXIMO EVENTO".
+
+Countdown timer para el próximo Retiro o Pascua Juvenil.
+
+CARACTERÍSTICAS TÉCNICAS ESPECÍFICAS:
+
+Totalmente responsive (optimizado para celulares, donde los adolescentes navegan más).
+
+Sistema de formularios de inscripción con envío de confirmación y PDF automático al correo.
+
+Integración del feed de Instagram/TikTok para que se actualice solo.
+
+Floating WhatsApp button.
+
+Formularios con validación de datos (incluyendo campos obligatorios para contactos de emergencia).
