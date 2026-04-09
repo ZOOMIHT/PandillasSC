@@ -4,11 +4,9 @@ import {
   Clock,
   MapPin,
   PlayCircle,
-  Download,
   Users,
   Flame,
   MessageCircle,
-  ChevronRight,
   Music,
   HeartHandshake,
   Activity,
@@ -22,12 +20,10 @@ import {
   Menu,
   X,
   BookOpen,
-  Star
+  Download
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardFooter, CardDescription } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 
@@ -113,9 +109,14 @@ export function LandingPage() {
   const nochepascualDate = new Date("2026-04-10T16:00:00");
 
   const WHATSAPP_LINK = "https://wa.link/t1dlbr";
+  const WHATSAPP_DIRECT = "https://wa.me/523313547099";
   const WHATSAPP_GROUP = "https://chat.whatsapp.com/EgVuADkmyky3nN9SuW0XtS";
   const INSTAGRAM_URL = "https://www.instagram.com/pandillasmpvc.s.c/";
   const TIKTOK_URL = "https://www.tiktok.com/@pandillasmpvc.s.c?lang=es-419";
+
+  const scrollTo = (id: string) => {
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+  };
 
   return (
     <div className="min-h-screen bg-slate-50 font-sans selection:bg-primary selection:text-white">
@@ -137,9 +138,11 @@ export function LandingPage() {
             <a href="#actividades" className={`text-sm font-medium transition-colors ${isScrolled ? "text-slate-600 hover:text-primary" : "text-white/90 hover:text-white"}`}>Actividades</a>
             <a href="#comunidad" className={`text-sm font-medium transition-colors ${isScrolled ? "text-slate-600 hover:text-primary" : "text-white/90 hover:text-white"}`}>Comunidad</a>
             <a href="#padres" className={`text-sm font-medium transition-colors ${isScrolled ? "text-slate-600 hover:text-primary" : "text-white/90 hover:text-white"}`}>Padres</a>
-            <Button className={isScrolled ? "bg-primary text-white" : "bg-white text-primary hover:bg-white/90"}>
-              Únete Hoy
-            </Button>
+            <a href={WHATSAPP_DIRECT} target="_blank" rel="noreferrer">
+              <Button className={isScrolled ? "bg-primary text-white" : "bg-white text-primary hover:bg-white/90"}>
+                Únete Hoy
+              </Button>
+            </a>
           </div>
 
           {/* Mobile Menu Toggle */}
@@ -181,12 +184,11 @@ export function LandingPage() {
       <header className="relative min-h-[100dvh] flex items-center justify-center overflow-hidden bg-slate-900">
         <div className="absolute inset-0 w-full h-full">
           <img
-            src="/__mockup/images/hero.png"
-            alt="Jóvenes en retiro al aire libre"
-            className="w-full h-full object-cover opacity-60"
+            src="/__mockup/images/hero-pandillas.jpg"
+            alt="Pandillas de la Santa Cruz - El Salto"
+            className="w-full h-full object-cover object-center opacity-75"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/50 to-transparent mix-blend-multiply"></div>
-          <div className="absolute inset-0 bg-gradient-to-b from-slate-900/50 to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/50 to-slate-900/30"></div>
         </div>
 
         <div className="relative z-10 container mx-auto px-4 pt-20 pb-12 flex flex-col items-center text-center">
@@ -212,15 +214,26 @@ export function LandingPage() {
           </p>
 
           <div className="flex flex-col sm:flex-row items-center gap-4 mb-16 w-full sm:w-auto">
-            <Button size="lg" className="w-full sm:w-auto text-lg h-14 px-8 bg-secondary text-secondary-foreground hover:bg-secondary/90 border-2 border-secondary font-bold">
+            <Button
+              size="lg"
+              className="w-full sm:w-auto text-lg h-14 px-8 bg-secondary text-secondary-foreground hover:bg-secondary/90 border-2 border-secondary font-bold"
+              onClick={() => scrollTo("noche-pascual")}
+            >
               Inscríbete al Próximo Retiro
             </Button>
-            <Button size="lg" variant="outline" className="w-full sm:w-auto text-lg h-14 px-8 text-white border-white hover:bg-white hover:text-slate-900 font-bold bg-transparent">
+            <Button
+              size="lg"
+              variant="outline"
+              className="w-full sm:w-auto text-lg h-14 px-8 text-white border-white hover:bg-white hover:text-slate-900 font-bold bg-transparent"
+              onClick={() => scrollTo("horarios")}
+            >
               Conoce Nuestros Horarios
             </Button>
-            <Button size="lg" variant="ghost" className="w-full sm:w-auto text-lg h-14 px-6 text-white hover:bg-white/10 group">
-              <PlayCircle className="w-6 h-6 mr-2 group-hover:scale-110 transition-transform" /> Ver Galería
-            </Button>
+            <a href={INSTAGRAM_URL} target="_blank" rel="noreferrer">
+              <Button size="lg" variant="ghost" className="w-full sm:w-auto text-lg h-14 px-6 text-white hover:bg-white/10 group">
+                <PlayCircle className="w-6 h-6 mr-2 group-hover:scale-110 transition-transform" /> Ver Galería
+              </Button>
+            </a>
           </div>
 
           <div className="w-full max-w-md mx-auto">
@@ -240,49 +253,19 @@ export function LandingPage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <Card className="border-0 shadow-xl shadow-slate-200/50 hover:-translate-y-2 transition-transform duration-300">
-              <CardHeader className="bg-primary text-white rounded-t-xl pb-8">
-                <div className="flex justify-between items-start mb-4">
-                  <Badge className="bg-white/20 hover:bg-white/20 text-white border-none">3 Días</Badge>
-                  <MapPin className="w-5 h-5 text-secondary" />
-                </div>
-                <CardTitle className="text-2xl font-bold">Retiro de Semana Santa</CardTitle>
-                <CardDescription className="text-white/80 font-medium">15 - 18 de Abril, 2026</CardDescription>
-              </CardHeader>
-              <CardContent className="pt-8">
-                <ul className="space-y-3 mb-6">
-                  <li className="flex items-center gap-3 text-slate-700">
-                    <CheckCircle2 className="w-5 h-5 text-primary" /> Hospedaje y comidas
-                  </li>
-                  <li className="flex items-center gap-3 text-slate-700">
-                    <CheckCircle2 className="w-5 h-5 text-primary" /> Materiales y playera
-                  </li>
-                  <li className="flex items-center gap-3 text-slate-700">
-                    <CheckCircle2 className="w-5 h-5 text-primary" /> Transporte redondo
-                  </li>
-                </ul>
-                <div className="bg-slate-50 p-4 rounded-lg flex justify-between items-center">
-                  <span className="text-sm font-medium text-slate-500">Cuota de recuperación</span>
-                  <span className="text-xl font-bold text-slate-900">$450 MXN</span>
-                </div>
-              </CardContent>
-              <CardFooter>
-                <Button className="w-full text-lg h-12">Inscribirse Ahora</Button>
-              </CardFooter>
-            </Card>
-
-            <Card className="border-0 shadow-xl shadow-slate-200/50 hover:-translate-y-2 transition-transform duration-300 relative overflow-hidden">
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {/* NOCHE PASCUAL */}
+            <Card id="noche-pascual" className="border-0 shadow-xl shadow-slate-200/50 hover:-translate-y-2 transition-transform duration-300 relative overflow-hidden">
               <div className="absolute top-4 right-4 z-10">
-                <Badge className="bg-secondary text-secondary-foreground hover:bg-secondary border-none">Cerca</Badge>
+                <Badge className="bg-secondary text-secondary-foreground hover:bg-secondary border-none">Próximo Evento</Badge>
               </div>
               <CardHeader className="bg-slate-900 text-white rounded-t-xl pb-8">
                 <div className="flex justify-between items-start mb-4">
-                  <Badge className="bg-white/20 hover:bg-white/20 text-white border-none">1 Día</Badge>
+                  <Badge className="bg-white/20 hover:bg-white/20 text-white border-none">1 Noche</Badge>
                   <Sun className="w-5 h-5 text-secondary" />
                 </div>
-                <CardTitle className="text-2xl font-bold">Pascua Juvenil</CardTitle>
-                <CardDescription className="text-white/80 font-medium">3 de Mayo, 2026</CardDescription>
+                <CardTitle className="text-2xl font-bold">Noche Pascual</CardTitle>
+                <CardDescription className="text-white/80 font-medium">10 de Abril, 2026</CardDescription>
               </CardHeader>
               <CardContent className="pt-8">
                 <ul className="space-y-3 mb-6">
@@ -290,41 +273,44 @@ export function LandingPage() {
                     <CheckCircle2 className="w-5 h-5 text-slate-900" /> Rally deportivo
                   </li>
                   <li className="flex items-center gap-3 text-slate-700">
-                    <CheckCircle2 className="w-5 h-5 text-slate-900" /> Comida compartida
+                    <CheckCircle2 className="w-5 h-5 text-slate-900" /> Cena y temas dinámicas compartidas
                   </li>
                   <li className="flex items-center gap-3 text-slate-700">
-                    <CheckCircle2 className="w-5 h-5 text-slate-900" /> Misa y concierto
+                    <CheckCircle2 className="w-5 h-5 text-slate-900" /> Fogata y quedarse a dormir en la parroquia
+                  </li>
+                  <li className="flex items-center gap-3 text-slate-700">
+                    <CheckCircle2 className="w-5 h-5 text-slate-900" /> Asistencia al Santuario de los Mártires
                   </li>
                 </ul>
                 <div className="bg-slate-50 p-4 rounded-lg flex justify-between items-center">
                   <span className="text-sm font-medium text-slate-500">Cuota de recuperación</span>
-                  <span className="text-xl font-bold text-slate-900">Gratuito</span>
+                  <span className="text-xl font-bold text-slate-900">$100 MXN</span>
                 </div>
               </CardContent>
               <CardFooter>
-                <Button className="w-full text-lg h-12 bg-slate-900 hover:bg-slate-800">Registrar Asistencia</Button>
+                <a href={WHATSAPP_LINK} target="_blank" rel="noreferrer" className="w-full">
+                  <Button className="w-full text-lg h-12 bg-slate-900 hover:bg-slate-800">Registrar Asistencia</Button>
+                </a>
               </CardFooter>
             </Card>
 
+            {/* PANDILLA #3 */}
             <Card className="border-0 shadow-xl shadow-slate-200/50 hover:-translate-y-2 transition-transform duration-300">
               <CardHeader className="bg-primary text-white rounded-t-xl pb-8">
                 <div className="flex justify-between items-start mb-4">
                   <Badge className="bg-white/20 hover:bg-white/20 text-white border-none">Próximamente</Badge>
                   <Tent className="w-5 h-5 text-secondary" />
                 </div>
-                <CardTitle className="text-2xl font-bold">Campamento de Verano</CardTitle>
-                <CardDescription className="text-white/80 font-medium">Julio 2026</CardDescription>
+                <CardTitle className="text-2xl font-bold">Pandilla #3</CardTitle>
+                <CardDescription className="text-white/80 font-medium">Fecha por confirmar</CardDescription>
               </CardHeader>
               <CardContent className="pt-8">
                 <ul className="space-y-3 mb-6">
                   <li className="flex items-center gap-3 text-slate-700">
-                    <CheckCircle2 className="w-5 h-5 text-primary" /> 4 días en la montaña
+                    <CheckCircle2 className="w-5 h-5 text-primary" /> Tres días intensos
                   </li>
                   <li className="flex items-center gap-3 text-slate-700">
-                    <CheckCircle2 className="w-5 h-5 text-primary" /> Fogatas y retos
-                  </li>
-                  <li className="flex items-center gap-3 text-slate-700">
-                    <CheckCircle2 className="w-5 h-5 text-primary" /> Supervivencia
+                    <CheckCircle2 className="w-5 h-5 text-primary" /> Temas sobre la fe y Cristo
                   </li>
                 </ul>
                 <div className="bg-slate-50 p-4 rounded-lg flex justify-between items-center">
@@ -333,7 +319,7 @@ export function LandingPage() {
                 </div>
               </CardContent>
               <CardFooter>
-                <Button variant="outline" className="w-full text-lg h-12">Recibir Info Primero</Button>
+                <Button variant="outline" className="w-full text-lg h-12" disabled>Próximamente</Button>
               </CardFooter>
             </Card>
           </div>
@@ -537,9 +523,9 @@ export function LandingPage() {
       </section>
 
       {/* SCHEDULE & DOWNLOADS */}
-      <section className="py-24 bg-white border-y border-slate-100">
-        <div className="container mx-auto px-4 max-w-6xl">
-          <div className="grid md:grid-cols-2 gap-16">
+      <section id="horarios" className="py-24 bg-white border-y border-slate-100">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <div className="flex flex-col gap-16">
 
             <div>
               <h3 className="text-3xl font-black text-slate-900 mb-8 flex items-center gap-3">
@@ -585,32 +571,6 @@ export function LandingPage() {
               </div>
             </div>
 
-            <div>
-              <h3 className="text-3xl font-black text-slate-900 mb-8 flex items-center gap-3">
-                <Download className="w-8 h-8 text-primary" /> Recursos
-              </h3>
-
-              <div className="grid sm:grid-cols-2 gap-4">
-                {[
-                  { title: "Cantoral del Grupo", desc: "PDF con todos los cantos", size: "2.4 MB" },
-                  { title: "Permiso para Padres", desc: "Carta responsiva salidas", size: "150 KB" },
-                  { title: "Reglamento", desc: "Normas de convivencia", size: "300 KB" },
-                  { title: "Oraciones Base", desc: "Oración del joven", size: "100 KB" }
-                ].map((doc, i) => (
-                  <a href="#" key={i} className="p-4 rounded-xl border border-slate-200 hover:border-primary hover:shadow-md transition-all group block">
-                    <div className="flex justify-between items-start mb-3">
-                      <div className="p-2 rounded-lg bg-slate-100 group-hover:bg-primary/10 text-slate-600 group-hover:text-primary transition-colors">
-                        <Download className="w-5 h-5" />
-                      </div>
-                      <span className="text-xs font-medium text-slate-400">{doc.size}</span>
-                    </div>
-                    <h4 className="font-bold text-slate-900 text-sm mb-1">{doc.title}</h4>
-                    <p className="text-xs text-slate-500">{doc.desc}</p>
-                  </a>
-                ))}
-              </div>
-            </div>
-
           </div>
         </div>
       </section>
@@ -636,12 +596,9 @@ export function LandingPage() {
               </div>
             ))}
           </div>
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Button size="lg" className="bg-white text-slate-900 hover:bg-slate-100 font-bold">
-              Descargar Reglamento de Seguridad
-            </Button>
+          <div className="flex justify-center">
             <a href={WHATSAPP_LINK} target="_blank" rel="noreferrer">
-              <Button size="lg" variant="outline" className="text-white border-white hover:bg-white hover:text-slate-900">
+              <Button size="lg" className="bg-white text-slate-900 hover:bg-slate-100 font-bold">
                 Contactar a Coordinación
               </Button>
             </a>
@@ -651,119 +608,76 @@ export function LandingPage() {
 
       {/* CONTACT & FOOTER */}
       <footer className="bg-slate-950 pt-24 pb-12 text-white">
-        <div className="container mx-auto px-4 max-w-6xl">
-          <div className="grid md:grid-cols-2 gap-16 mb-16">
+        <div className="container mx-auto px-4 max-w-3xl text-center">
+          <h2 className="text-4xl font-black mb-10">¿Listo para unirte?</h2>
 
-            {/* Contact Info */}
-            <div>
-              <h2 className="text-4xl font-black mb-8">¿Listo para unirte?</h2>
-
-              <div className="space-y-6 mb-10">
-                <div className="flex gap-4 items-start">
-                  <div className="p-3 bg-white/10 rounded-xl shrink-0">
-                    <MapPin className="w-6 h-6 text-secondary" />
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-lg">Parroquia La Santa Cruz</h4>
-                    <p className="text-white/60">Revolución Nte. 61, Potrero Nuevo,<br />45680 El Salto, Jal., México</p>
-                  </div>
-                </div>
-
-                <div className="flex gap-4 items-start">
-                  <div className="p-3 bg-white/10 rounded-xl shrink-0">
-                    <Smartphone className="w-6 h-6 text-secondary" />
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-lg">WhatsApp Directo</h4>
-                    <a href={WHATSAPP_LINK} target="_blank" rel="noreferrer" className="text-white/60 hover:text-secondary transition-colors">
-                      +52 33 13 54 70 99
-                    </a>
-                  </div>
-                </div>
-
-                <div className="flex gap-4 items-start">
-                  <div className="p-3 bg-white/10 rounded-xl shrink-0">
-                    <Clock className="w-6 h-6 text-secondary" />
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-lg">Horarios</h4>
-                    <p className="text-white/60">Miércoles: 8:00 PM – 9:00 PM</p>
-                    <p className="text-white/60">Misa de Adolescentes: Domingos 6:30 PM</p>
-                  </div>
-                </div>
+          <div className="space-y-6 mb-10 text-left max-w-md mx-auto">
+            <div className="flex gap-4 items-start">
+              <div className="p-3 bg-white/10 rounded-xl shrink-0">
+                <MapPin className="w-6 h-6 text-secondary" />
               </div>
-
               <div>
-                <h4 className="font-bold text-lg mb-4">Síguenos en nuestras redes</h4>
-                <div className="flex gap-4 mb-6">
-                  <a
-                    href={INSTAGRAM_URL}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="w-14 h-14 rounded-full bg-white/10 flex items-center justify-center hover:bg-gradient-to-tr hover:from-yellow-400 hover:via-pink-500 hover:to-purple-500 transition-all duration-300"
-                    aria-label="Instagram"
-                  >
-                    <Instagram className="w-6 h-6" />
-                  </a>
-                  <a
-                    href={TIKTOK_URL}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="w-14 h-14 rounded-full bg-white/10 flex items-center justify-center hover:bg-black transition-all duration-300"
-                    aria-label="TikTok"
-                  >
-                    <TikTokIcon />
-                  </a>
-                </div>
+                <h4 className="font-bold text-lg">Parroquia La Santa Cruz</h4>
+                <p className="text-white/60">Revolución Nte. 61, Potrero Nuevo,<br />45680 El Salto, Jal., México</p>
+              </div>
+            </div>
 
-                {/* WhatsApp Group CTA */}
-                <a href={WHATSAPP_GROUP} target="_blank" rel="noreferrer">
-                  <Button
-                    size="lg"
-                    className="bg-[#25D366] hover:bg-[#20ba5a] text-white font-bold text-base h-14 px-6 gap-3 w-full sm:w-auto"
-                  >
-                    <WhatsAppIcon />
-                    Únete a nuestro grupo de WhatsApp
-                  </Button>
+            <div className="flex gap-4 items-start">
+              <div className="p-3 bg-white/10 rounded-xl shrink-0">
+                <Smartphone className="w-6 h-6 text-secondary" />
+              </div>
+              <div>
+                <h4 className="font-bold text-lg">WhatsApp Directo</h4>
+                <a href={WHATSAPP_LINK} target="_blank" rel="noreferrer" className="text-white/60 hover:text-secondary transition-colors">
+                  +52 33 13 54 70 99
                 </a>
               </div>
             </div>
 
-            {/* Quick Form */}
-            <div className="bg-white/5 p-8 rounded-3xl border border-white/10 backdrop-blur-sm">
-              <h3 className="text-2xl font-bold mb-6">Mándanos tus datos</h3>
-              <p className="text-white/60 mb-8 text-sm">Déjanos tu información y un coordinador se pondrá en contacto contigo esta misma semana.</p>
+            <div className="flex gap-4 items-start">
+              <div className="p-3 bg-white/10 rounded-xl shrink-0">
+                <Clock className="w-6 h-6 text-secondary" />
+              </div>
+              <div>
+                <h4 className="font-bold text-lg">Horarios</h4>
+                <p className="text-white/60">Miércoles: 8:00 PM – 9:00 PM</p>
+                <p className="text-white/60">Misa de Adolescentes: Domingos 6:30 PM</p>
+              </div>
+            </div>
+          </div>
 
-              <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
-                <div className="grid grid-cols-3 gap-4">
-                  <div className="col-span-2 space-y-2">
-                    <Label htmlFor="nombre" className="text-white/80">Nombre del Joven</Label>
-                    <Input id="nombre" className="bg-white/10 border-white/20 text-white placeholder:text-white/30 h-12" placeholder="Tu nombre completo" />
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="edad" className="text-white/80">Edad</Label>
-                    <Input id="edad" type="number" min="12" max="25" className="bg-white/10 border-white/20 text-white placeholder:text-white/30 h-12" placeholder="Años" />
-                  </div>
-                </div>
-
-                <div className="space-y-2">
-                  <Label htmlFor="tutor" className="text-white/80">Nombre de Padre/Tutor</Label>
-                  <Input id="tutor" className="bg-white/10 border-white/20 text-white placeholder:text-white/30 h-12" placeholder="Para menores de edad" />
-                </div>
-
-                <div className="space-y-2">
-                  <Label htmlFor="telefono" className="text-white/80">Teléfono (WhatsApp)</Label>
-                  <Input id="telefono" type="tel" className="bg-white/10 border-white/20 text-white placeholder:text-white/30 h-12" placeholder="10 dígitos" />
-                </div>
-
-                <a href={WHATSAPP_LINK} target="_blank" rel="noreferrer" className="block">
-                  <Button className="w-full h-12 mt-4 bg-primary text-white hover:bg-primary/90 font-bold text-lg">
-                    Enviar Mensaje
-                  </Button>
-                </a>
-              </form>
+          <div className="mb-10">
+            <h4 className="font-bold text-lg mb-5">Síguenos en nuestras redes</h4>
+            <div className="flex gap-4 justify-center mb-6">
+              <a
+                href={INSTAGRAM_URL}
+                target="_blank"
+                rel="noreferrer"
+                className="w-14 h-14 rounded-full bg-white/10 flex items-center justify-center hover:bg-gradient-to-tr hover:from-yellow-400 hover:via-pink-500 hover:to-purple-500 transition-all duration-300"
+                aria-label="Instagram"
+              >
+                <Instagram className="w-6 h-6" />
+              </a>
+              <a
+                href={TIKTOK_URL}
+                target="_blank"
+                rel="noreferrer"
+                className="w-14 h-14 rounded-full bg-white/10 flex items-center justify-center hover:bg-black transition-all duration-300"
+                aria-label="TikTok"
+              >
+                <TikTokIcon />
+              </a>
             </div>
 
+            <a href={WHATSAPP_GROUP} target="_blank" rel="noreferrer">
+              <Button
+                size="lg"
+                className="bg-[#25D366] hover:bg-[#20ba5a] text-white font-bold text-base h-14 px-8 gap-3"
+              >
+                <WhatsAppIcon />
+                Únete a nuestro grupo de WhatsApp
+              </Button>
+            </a>
           </div>
 
           <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-white/40">
