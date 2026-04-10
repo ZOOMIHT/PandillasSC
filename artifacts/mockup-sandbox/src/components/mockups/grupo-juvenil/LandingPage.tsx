@@ -352,7 +352,7 @@ export function LandingPage() {
               {[
                 { step: "1", title: "Contáctanos", desc: "Mándanos un WhatsApp para saber que vienes.", icon: <MessageCircle className="w-6 h-6" /> },
                 { step: "2", title: "Llega el Miércoles", desc: "Te recibiremos en la entrada de la parroquia a las 8:00 PM.", icon: <MapPin className="w-6 h-6" /> },
-                { step: "3", title: "Intégrate", desc: "Te asignaremos a una comunidad pequeña de tu edad.", icon: <Users className="w-6 h-6" /> },
+                { step: "3", title: "Intégrate", desc: "Habla con los adolescentes, vive las juntas con fe y amor.", icon: <Users className="w-6 h-6" /> },
                 { step: "4", title: "¡Vive el Retiro!", desc: "La verdadera experiencia empieza en tu primer campamento.", icon: <Flame className="w-6 h-6" /> }
               ].map((item, idx) => (
                 <div key={idx} className="relative z-10 flex flex-col items-center text-center">
