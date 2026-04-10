@@ -1,8 +1,14 @@
 {
   "framework": "vite",
   "outputDirectory": "artifacts/mockup-sandbox/dist",
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "/preview/grupo-juvenil/LandingPage",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
-
