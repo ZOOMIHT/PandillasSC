@@ -437,9 +437,9 @@ export function LandingPage() {
 
           <div className="grid md:grid-cols-3 gap-6">
             {[
-              { text: "Este grupo me enseñó que la fe no es aburrida. Encontré a mis mejores amigos en un campamento y ahora no me pierdo un solo miércoles.", name: "Carlos", age: "17 años", time: "2 años en el grupo" },
-              { text: "Yo llegué obligado por mis papás, no quería ir. El primer día hicimos un rally increíble y me di cuenta que todos eran súper buena onda. Ahora yo soy el que arrastra a sus amigos.", name: "Valeria", age: "15 años", time: "6 meses en el grupo" },
-              { text: "Tocar en el ministerio de música me dio la confianza que no tenía en la escuela. Es mi lugar seguro en la semana.", name: "Mateo", age: "18 años", time: "4 años en el grupo" }
+              { text: "Este grupo me ayudó de una manera hermosa, descubrí la grandeza del amor de Dios, me enseñó que seguir a Cristo es algo divertido y hermoso, y encontré amigos que se convirtieron en familia, es algo hermoso y una de las mejores experiencias, lo recomiendo para todos los jóvenes que quieran descubrir el amor a Cristo y seguirlo.", name: "Marlene", age: "15 años", time: "1 año en el grupo" },
+              { text: "Este grupo me ha enseñado mucho a trabajar en equipo y he conocido personas maravillosas en las cuales puedo ver a Cristo.", name: "Oliver", age: "16 años", time: "Más de dos años en el grupo" },
+              { text: "Conocí muchas personas amigables, encuentro paz en el grupo, me divierto con los amigos que hice en el grupo y puedo aprender más de Jesús aun lado de él.", name: "Araly", age: "12 años", time: "Menos de un año en el grupo" }
             ].map((testimony, i) => (
               <Card key={i} className="bg-white/10 border-white/10 text-white backdrop-blur-md hover:bg-white/15 transition-colors">
                 <CardContent className="pt-6">
