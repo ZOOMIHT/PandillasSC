@@ -65,7 +65,7 @@ export function LandingPage() {
         <div className="container mx-auto px-4 flex items-center justify-between">
           <div className="flex items-center gap-2">
             <img
-              src="/__mockup/images/logo-pandillas.png"
+              src="/images/logo-pandillas.png"
               alt="Logo Pandillas de la Santa Cruz"
               className="w-8 h-8 object-contain"
             />
@@ -124,7 +124,7 @@ export function LandingPage() {
       <header className="relative min-h-[100dvh] flex items-center justify-center overflow-hidden bg-slate-900">
         <div className="absolute inset-0 w-full h-full">
           <img
-            src="/__mockup/images/hero-pandillas.jpg"
+            src="/images/hero-pandillas.jpg"
             alt="Pandillas de la Santa Cruz - El Salto"
             className="w-full h-full object-cover object-center opacity-75"
           />
@@ -277,7 +277,7 @@ export function LandingPage() {
           <div className="flex flex-col md:flex-row gap-12 items-center mb-16">
             <div className="md:w-1/2">
               <img
-                src="/__mockup/images/sports.png"
+                src="/images/sports.png"
                 alt="Jóvenes haciendo deporte"
                 className="rounded-3xl shadow-2xl object-cover aspect-video w-full"
               />
@@ -315,7 +315,7 @@ export function LandingPage() {
       <section id="comunidad" className="py-24 bg-slate-900 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-1/2 h-full opacity-20 pointer-events-none">
           <img
-            src="/__mockup/images/community.png"
+            src="/images/community.png"
             alt="Comunidad"
             className="w-full h-full object-cover mix-blend-luminosity"
             style={{ maskImage: 'linear-gradient(to right, transparent, black)', WebkitMaskImage: 'linear-gradient(to right, transparent, black)' }}
@@ -362,7 +362,7 @@ export function LandingPage() {
           <div className="flex flex-col md:flex-row gap-12 items-center">
             <div className="md:w-1/3 flex flex-col items-center">
               <img
-                src="/__mockup/images/logo-pandillas.png"
+                src="/images/logo-pandillas.png"
                 alt="Logo Pandillas de la Santa Cruz"
                 className="w-40 h-40 object-contain mb-4"
               />
