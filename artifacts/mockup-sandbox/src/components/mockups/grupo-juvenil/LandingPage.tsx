@@ -169,7 +169,7 @@ export function LandingPage() {
             >
               Conoce Nuestros Horarios
             </Button>
-            <a href={INSTAGRAM_URL} target="_blank" rel="noreferrer">
+            <a href="/preview/grupo-juvenil/Galeria">
               <Button size="lg" variant="ghost" className="w-full sm:w-auto text-lg h-14 px-6 text-white hover:bg-white/10 group">
                 <PlayCircle className="w-6 h-6 mr-2 group-hover:scale-110 transition-transform" /> Ver Galería
               </Button>
