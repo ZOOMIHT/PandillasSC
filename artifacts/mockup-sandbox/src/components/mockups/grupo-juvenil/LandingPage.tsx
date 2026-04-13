@@ -15,71 +15,15 @@ import {
   Smartphone,
   CheckCircle2,
   Tent,
-  Sun,
   ShieldCheck,
   Menu,
   X,
-  BookOpen,
-  Download
+  BookOpen
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardFooter, CardDescription } from "@/components/ui/card";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
-
-const CountdownTimer = ({ targetDate }: { targetDate: Date }) => {
-  const [timeLeft, setTimeLeft] = useState({
-    days: 0,
-    hours: 0,
-    minutes: 0,
-    seconds: 0
-  });
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      const now = new Date().getTime();
-      const distance = targetDate.getTime() - now;
-
-      if (distance < 0) {
-        clearInterval(timer);
-        return;
-      }
-
-      setTimeLeft({
-        days: Math.floor(distance / (1000 * 60 * 60 * 24)),
-        hours: Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
-        minutes: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
-        seconds: Math.floor((distance % (1000 * 60)) / 1000)
-      });
-    }, 1000);
-
-    return () => clearInterval(timer);
-  }, [targetDate]);
-
-  return (
-    <div className="flex gap-4 items-center justify-center text-white backdrop-blur-md bg-white/10 p-4 rounded-2xl border border-white/20">
-      <div className="flex flex-col items-center">
-        <span className="text-3xl font-bold tracking-tighter">{timeLeft.days}</span>
-        <span className="text-xs uppercase tracking-widest text-white/80">Días</span>
-      </div>
-      <span className="text-2xl opacity-50">:</span>
-      <div className="flex flex-col items-center">
-        <span className="text-3xl font-bold tracking-tighter">{timeLeft.hours.toString().padStart(2, '0')}</span>
-        <span className="text-xs uppercase tracking-widest text-white/80">Hrs</span>
-      </div>
-      <span className="text-2xl opacity-50">:</span>
-      <div className="flex flex-col items-center">
-        <span className="text-3xl font-bold tracking-tighter">{timeLeft.minutes.toString().padStart(2, '0')}</span>
-        <span className="text-xs uppercase tracking-widest text-white/80">Min</span>
-      </div>
-      <span className="text-2xl opacity-50 hidden sm:inline">:</span>
-      <div className="hidden sm:flex flex-col items-center">
-        <span className="text-3xl font-bold tracking-tighter">{timeLeft.seconds.toString().padStart(2, '0')}</span>
-        <span className="text-xs uppercase tracking-widest text-white/80">Seg</span>
-      </div>
-    </div>
-  );
-};
 
 const TikTokIcon = () => (
   <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24">
@@ -105,12 +49,8 @@ export function LandingPage() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Countdown target: April 10, 2026 at 4:00 PM (local time)
-  const nochepascualDate = new Date("2026-04-10T16:00:00");
-
   const WHATSAPP_LINK = "https://wa.link/t1dlbr";
   const WHATSAPP_DIRECT = "https://wa.me/523313547099";
-  const WHATSAPP_GROUP = "https://chat.whatsapp.com/EgVuADkmyky3nN9SuW0XtS";
   const INSTAGRAM_URL = "https://www.instagram.com/pandillasmpvc.s.c/";
   const TIKTOK_URL = "https://www.tiktok.com/@pandillasmpvc.s.c?lang=es-419";
 
@@ -125,7 +65,7 @@ export function LandingPage() {
         <div className="container mx-auto px-4 flex items-center justify-between">
           <div className="flex items-center gap-2">
             <img
-              src="/images/logo-pandillas.png"
+              src="/__mockup/images/logo-pandillas.png"
               alt="Logo Pandillas de la Santa Cruz"
               className="w-8 h-8 object-contain"
             />
@@ -184,7 +124,7 @@ export function LandingPage() {
       <header className="relative min-h-[100dvh] flex items-center justify-center overflow-hidden bg-slate-900">
         <div className="absolute inset-0 w-full h-full">
           <img
-            src="/images/hero-pandillas.jpg"
+            src="/__mockup/images/hero-pandillas.jpg"
             alt="Pandillas de la Santa Cruz - El Salto"
             className="w-full h-full object-cover object-center opacity-75"
           />
@@ -217,9 +157,9 @@ export function LandingPage() {
             <Button
               size="lg"
               className="w-full sm:w-auto text-lg h-14 px-8 bg-secondary text-secondary-foreground hover:bg-secondary/90 border-2 border-secondary font-bold"
-              onClick={() => scrollTo("noche-pascual")}
+              onClick={() => scrollTo("eventos")}
             >
-              Inscríbete al Próximo Retiro
+              Ver Próximos Retiros
             </Button>
             <Button
               size="lg"
@@ -235,11 +175,6 @@ export function LandingPage() {
               </Button>
             </a>
           </div>
-
-          <div className="w-full max-w-md mx-auto">
-            <p className="text-white/80 text-sm uppercase tracking-widest font-bold mb-3">Noche Pascual en:</p>
-            <CountdownTimer targetDate={nochepascualDate} />
-          </div>
         </div>
       </header>
 
@@ -253,47 +188,7 @@ export function LandingPage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {/* NOCHE PASCUAL */}
-            <Card id="noche-pascual" className="border-0 shadow-xl shadow-slate-200/50 hover:-translate-y-2 transition-transform duration-300 relative overflow-hidden">
-              <div className="absolute top-4 right-4 z-10">
-                <Badge className="bg-secondary text-secondary-foreground hover:bg-secondary border-none">Próximo Evento</Badge>
-              </div>
-              <CardHeader className="bg-slate-900 text-white rounded-t-xl pb-8">
-                <div className="flex justify-between items-start mb-4">
-                  <Badge className="bg-white/20 hover:bg-white/20 text-white border-none">1 Noche</Badge>
-                  <Sun className="w-5 h-5 text-secondary" />
-                </div>
-                <CardTitle className="text-2xl font-bold">Noche Pascual</CardTitle>
-                <CardDescription className="text-white/80 font-medium">10 de Abril, 2026</CardDescription>
-              </CardHeader>
-              <CardContent className="pt-8">
-                <ul className="space-y-3 mb-6">
-                  <li className="flex items-center gap-3 text-slate-700">
-                    <CheckCircle2 className="w-5 h-5 text-slate-900" /> Rally deportivo
-                  </li>
-                  <li className="flex items-center gap-3 text-slate-700">
-                    <CheckCircle2 className="w-5 h-5 text-slate-900" /> Cena y temas dinámicas compartidas
-                  </li>
-                  <li className="flex items-center gap-3 text-slate-700">
-                    <CheckCircle2 className="w-5 h-5 text-slate-900" /> Fogata y quedarse a dormir en la parroquia
-                  </li>
-                  <li className="flex items-center gap-3 text-slate-700">
-                    <CheckCircle2 className="w-5 h-5 text-slate-900" /> Asistencia al Santuario de los Mártires
-                  </li>
-                </ul>
-                <div className="bg-slate-50 p-4 rounded-lg flex justify-between items-center">
-                  <span className="text-sm font-medium text-slate-500">Cuota de recuperación</span>
-                  <span className="text-xl font-bold text-slate-900">$100 MXN</span>
-                </div>
-              </CardContent>
-              <CardFooter>
-                <a href={WHATSAPP_LINK} target="_blank" rel="noreferrer" className="w-full">
-                  <Button className="w-full text-lg h-12 bg-slate-900 hover:bg-slate-800">Registrar Asistencia</Button>
-                </a>
-              </CardFooter>
-            </Card>
-
+          <div className="max-w-2xl mx-auto">
             {/* PANDILLA #3 */}
             <Card className="border-0 shadow-xl shadow-slate-200/50 hover:-translate-y-2 transition-transform duration-300">
               <CardHeader className="bg-primary text-white rounded-t-xl pb-8">
@@ -382,7 +277,7 @@ export function LandingPage() {
           <div className="flex flex-col md:flex-row gap-12 items-center mb-16">
             <div className="md:w-1/2">
               <img
-                src="/images/sports.png"
+                src="/__mockup/images/sports.png"
                 alt="Jóvenes haciendo deporte"
                 className="rounded-3xl shadow-2xl object-cover aspect-video w-full"
               />
@@ -420,7 +315,7 @@ export function LandingPage() {
       <section id="comunidad" className="py-24 bg-slate-900 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-1/2 h-full opacity-20 pointer-events-none">
           <img
-            src="/images/community.png"
+            src="/__mockup/images/community.png"
             alt="Comunidad"
             className="w-full h-full object-cover mix-blend-luminosity"
             style={{ maskImage: 'linear-gradient(to right, transparent, black)', WebkitMaskImage: 'linear-gradient(to right, transparent, black)' }}
@@ -467,7 +362,7 @@ export function LandingPage() {
           <div className="flex flex-col md:flex-row gap-12 items-center">
             <div className="md:w-1/3 flex flex-col items-center">
               <img
-                src="/images/logo-pandillas.png"
+                src="/__mockup/images/logo-pandillas.png"
                 alt="Logo Pandillas de la Santa Cruz"
                 className="w-40 h-40 object-contain mb-4"
               />
@@ -585,7 +480,7 @@ export function LandingPage() {
           </p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10 text-left">
             {[
-              "Respeto mutuo entre todos los miembros",
+              "Respeto mutuo entre todos members",
               "Ambiente cien por ciento sano y seguro",
               "Trabajo en equipo y responsabilidad",
               "Acompañamiento constante por coordinadores y asesor adulto"
@@ -668,16 +563,6 @@ export function LandingPage() {
                 <TikTokIcon />
               </a>
             </div>
-
-            <a href={WHATSAPP_GROUP} target="_blank" rel="noreferrer">
-              <Button
-                size="lg"
-                className="bg-[#25D366] hover:bg-[#20ba5a] text-white font-bold text-base h-14 px-8 gap-3"
-              >
-                <WhatsAppIcon />
-                Únete a nuestro grupo de WhatsApp
-              </Button>
-            </a>
           </div>
 
           <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-white/40">
