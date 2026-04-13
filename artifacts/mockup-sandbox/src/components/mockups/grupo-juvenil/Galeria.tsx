@@ -34,7 +34,7 @@ export default function Galeria() {
         <div className="container mx-auto px-4 flex items-center justify-between">
           <div className="flex items-center gap-2">
             <img src="/images/logo-pandillas.png" alt="Logo" className="w-8 h-8 object-contain" />
-            <span className="font-bold text-xl tracking-tight">Galería de Fe</span>
+            <span className="font-bold text-xl tracking-tight">Galería de Amor a Cristo</span>
           </div>
           <a href="/" className="text-sm font-medium hover:text-secondary transition-colors">Volver al Inicio</a>
         </div>
@@ -142,10 +142,14 @@ export default function Galeria() {
       {/* Footer Minimalista */}
       <footer className="bg-black py-12 border-t border-white/5">
         <div className="container mx-auto px-4 text-center">
-          <p className="text-white/20 text-sm italic mb-4">"Viviendo la alegría de Cristo en El Salto"</p>
-          <div className="flex gap-4 justify-center opacity-40 hover:opacity-100 transition-opacity">
-            <Instagram className="w-5 h-5" />
-            <TikTokIcon />
+          <p className="text-white/20 text-sm italic mb-6">"Viviendo la alegría de Cristo en El Salto"</p>
+          <div className="flex gap-4 justify-center">
+            <a href="https://www.instagram.com/pandillasmpvc.s.c/" target="_blank" rel="noreferrer" className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center hover:bg-gradient-to-tr hover:from-yellow-400 hover:via-pink-500 hover:to-purple-500 transition-all duration-300 text-white/70 hover:text-white">
+              <Instagram className="w-5 h-5" />
+            </a>
+            <a href="https://www.tiktok.com/@pandillasmpvc.s.c?lang=es-419" target="_blank" rel="noreferrer" className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#00f2fe] transition-all duration-300 text-white/70 hover:text-white">
+              <TikTokIcon />
+            </a>
           </div>
         </div>
       </footer>
