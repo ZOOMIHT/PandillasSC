@@ -52,7 +52,7 @@ const EVENTOS = [
     totalVideos: 1,
     mostrarEtiqueta: false,
     descripcion: "Una salida llena de fe y comunión hacia la Catedral. Caminamos unidos como verdaderos peregrinos de esperanza, renovando nuestro corazón y compartiendo la alegría de la Iglesia joven.",
-    fotoPortada: "/images/jubileo (20).jpg"
+    fotoPortada: "/images/jubileo (1).jpg"
   },
   {
     id: "semad-2025",
@@ -84,8 +84,19 @@ const EVENTOS = [
     totalFotos: 49,
     totalVideos: 0,
     mostrarEtiqueta: false,
-    descripcion: "El retiro que marcó un antes y un después en nuestra historia. Con profundo amor atesoramos este momento en el que pasamos de ser 'Apostolitos de la Santa Cruz' a ser oficialmente 'Pandillas de la Santa Cruz', reconocidos por la Arquidiócesis de Guadalajara. Un agradecimiento inmenso a nuestros hermanos de Pandillas Tlajomulco; gracias por impulsarnos a unirnos como MPVC. ¡Sin su guía y apoyo no seríamos la gran familia que somos hoy!.",
+    descripcion: "El retiro que marcó nuestra historia: pasamos de Apostolitos a Pandillas de la Santa Cruz, reconocidos por la Arquidiócesis. Gracias infinitas a Pandillas Tlajomulco por impulsarnos a ser MPVC.",
     fotoPortada: "/images/pandilla1 (1).jpg"
+  },
+  {
+    id: "pascua-1-apostolitos",
+    titulo: "Pascua 1: Apostolitos",
+    carpeta: "pascua1",
+    prefijoVideo: "videopascua1",
+    totalFotos: 26,
+    totalVideos: 1,
+    mostrarEtiqueta: false,
+    descripcion: "Nuestras raíces. Uno de los primeros y más hermosos eventos que vivimos cuando aún nos llamábamos 'Apostolitos'. Atesoramos estos recuerdos con todo el corazón, pues aquí comenzó a encenderse la llama de fe de nuestra gran familia.",
+    fotoPortada: "/images/pascua1 (1).jpg"
   }
 ];
 
