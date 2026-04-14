@@ -42,6 +42,17 @@ const EVENTOS = [
     mostrarEtiqueta: false, // A este NO le sale el letrero amarillo
     descripcion: "Un evento muy especial y reservado. No podemos contarles mucho por aquí, pero es una experiencia profundamente transformadora, llena de amor, grandes enseñanzas y un encuentro inolvidable con Cristo.",
     fotoPortada: "/images/pandilla2 (1).jpg"
+  },
+  {
+    id: "jubileo-catedral",
+    titulo: "Jubileo: Peregrinos de Esperanza",
+    carpeta: "jubileo",
+    prefijoVideo: "videojubileo",
+    totalFotos: 25,
+    totalVideos: 1,
+    mostrarEtiqueta: false,
+    descripcion: "Una salida llena de fe y comunión hacia la Catedral. Caminamos unidos como verdaderos peregrinos de esperanza, renovando nuestro corazón y compartiendo la inmensa alegría de ser la Iglesia joven en movimiento.",
+    fotoPortada: "/images/jubileo (1).jpg"
   }
 ];
 
