@@ -84,7 +84,7 @@ const EVENTOS = [
     totalFotos: 49,
     totalVideos: 0,
     mostrarEtiqueta: false,
-    descripcion: "El retiro que marcó nuestra historia: pasamos de Apostolitos a Pandillas de la Santa Cruz, reconocidos por la Arquidiócesis. Gracias infinitas a Pandillas Tlajomulco por impulsarnos a ser MPVC.",
+    descripcion: "El retiro que marcó un antes y un después en nuestra historia. Con profundo amor atesoramos este momento en el que pasamos de ser 'Apostolitos de la Santa Cruz' a ser oficialmente 'Pandillas de la Santa Cruz', reconocidos por la Arquidiócesis de Guadalajara. Un agradecimiento inmenso a nuestros hermanos de Pandillas Tlajomulco; gracias por impulsarnos a unirnos como MPVC. ¡Sin su guía y apoyo no seríamos la gran familia que somos hoy!",
     fotoPortada: "/images/pandilla1 (1).jpg"
   },
   {
