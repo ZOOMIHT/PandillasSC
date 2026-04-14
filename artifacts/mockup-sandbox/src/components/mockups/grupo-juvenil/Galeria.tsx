@@ -8,7 +8,7 @@ const TikTokIcon = () => (
   </svg>
 );
 
-// Definición de los eventos (Se llenan de derecha a izquierda en la cuadrícula)
+// Definición de los eventos
 const EVENTOS = [
   {
     id: "noche-pascual-2026",
@@ -127,7 +127,7 @@ export default function Galeria() {
           </p>
         </header>
 
-        {/* Cuadrícula de Eventos (De derecha a izquierda) */}
+        {/* Cuadrícula de Eventos */}
         <div className="flex flex-wrap flex-row-reverse gap-8 justify-start">
           {EVENTOS.map((evento) => (
             <div 
@@ -184,6 +184,8 @@ export default function Galeria() {
                   <video src={`/images/${eventoSeleccionado.prefijoVideo} (${i+1}).mp4`} className="w-full opacity-40" />
                 </div>
               ))}
+
+              {/* Aquí está el truco de hacker que esconde las fotos rotas */}
               {Array.from({ length: eventoSeleccionado.totalFotos }).map((_, i) => (
                 <img 
                   key={`f-${i}`}
@@ -191,6 +193,7 @@ export default function Galeria() {
                   alt={`Foto ${i+1}`}
                   className="w-full rounded-2xl hover:scale-[1.02] transition-transform cursor-pointer shadow-xl"
                   onClick={() => setArchivoAbierto({ url: `/images/${eventoSeleccionado.carpeta} (${i+1}).jpg`, tipo: 'foto' })}
+                  onError={(e) => { e.currentTarget.style.display = 'none'; }}
                 />
               ))}
             </div>
