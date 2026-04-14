@@ -53,6 +53,17 @@ const EVENTOS = [
     mostrarEtiqueta: false,
     descripcion: "Una salida llena de fe y comunión hacia la Catedral. Caminamos unidos como verdaderos peregrinos de esperanza, renovando nuestro corazón y compartiendo la inmensa alegría de ser la Iglesia joven en movimiento.",
     fotoPortada: "/images/jubileo (1).jpg"
+  },
+  {
+    id: "semad-2025",
+    titulo: "Semad 2025",
+    carpeta: "semad",
+    prefijoVideo: "videosemad",
+    totalFotos: 45,
+    totalVideos: 4,
+    mostrarEtiqueta: false,
+    descripcion: "Una experiencia inolvidable llena de energía, dinámicas y reflexión. Un encuentro profundo donde descubrimos el inmenso amor de Cristo y fortalecemos nuestros lazos como jóvenes dispuestos a ser luz.",
+    fotoPortada: "/images/semad (1).jpg"
   }
 ];
 
