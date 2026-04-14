@@ -8,7 +8,7 @@ const TikTokIcon = () => (
   </svg>
 );
 
-// Definición de los eventos
+// Definición de los eventos (Se llenan de derecha a izquierda en la cuadrícula)
 const EVENTOS = [
   {
     id: "noche-pascual-2026",
@@ -17,7 +17,7 @@ const EVENTOS = [
     prefijoVideo: "videopascua",
     totalFotos: 43,
     totalVideos: 4,
-    mostrarEtiqueta: true, // A este sí le sale el letrero amarillo
+    mostrarEtiqueta: true,
     descripcion: "Un momento hermoso de conexión con el Señor. Vivimos Su Pasión, Muerte y Resurrección con el corazón lleno de felicidad, cantos y bailes que desbordaban alegría pura.",
     fotoPortada: "/images/nochepascual (1).jpg"
   },
@@ -28,7 +28,7 @@ const EVENTOS = [
     prefijoVideo: "videofamilia",
     totalFotos: 138,
     totalVideos: 5,
-    mostrarEtiqueta: false, // A este NO le sale el letrero amarillo
+    mostrarEtiqueta: false,
     descripcion: "Más que un grupo, somos una verdadera familia en Cristo. Aquí guardamos las risas, las convivencias, las fiestas y esos momentos inolvidables donde compartimos la alegría de estar juntos.",
     fotoPortada: "/images/familia (1).jpg"
   },
@@ -39,8 +39,8 @@ const EVENTOS = [
     prefijoVideo: "videopandilla2",
     totalFotos: 21,
     totalVideos: 0,
-    mostrarEtiqueta: false, // A este NO le sale el letrero amarillo
-    descripcion: "Un evento muy especial y reservado. No podemos contarles mucho por aquí, pero es una experiencia profundamente transformadora, llena de amor, grandes enseñanzas y un encuentro inolvidable con Cristo.",
+    mostrarEtiqueta: false,
+    descripcion: "Un evento muy especial y reservado. Una experiencia profundamente transformadora, llena de amor y grandes enseñanzas. Un agradecimiento especial a Pandillas La Azucena por el apoyo incondicional que nos ofrecieron siempre.",
     fotoPortada: "/images/pandilla2 (1).jpg"
   },
   {
@@ -51,8 +51,8 @@ const EVENTOS = [
     totalFotos: 25,
     totalVideos: 1,
     mostrarEtiqueta: false,
-    descripcion: "Una salida llena de fe y comunión hacia la Catedral. Caminamos unidos como verdaderos peregrinos de esperanza, renovando nuestro corazón y compartiendo la inmensa alegría de ser la Iglesia joven en movimiento.",
-    fotoPortada: "/images/jubileo (1).jpg"
+    descripcion: "Una salida llena de fe y comunión hacia la Catedral. Caminamos unidos como verdaderos peregrinos de esperanza, renovando nuestro corazón y compartiendo la alegría de la Iglesia joven.",
+    fotoPortada: "/images/jubileo (20).jpg"
   },
   {
     id: "semad-2025",
@@ -62,7 +62,7 @@ const EVENTOS = [
     totalFotos: 45,
     totalVideos: 4,
     mostrarEtiqueta: false,
-    descripcion: "Una experiencia inolvidable llena de energía, dinámicas y reflexión. Un encuentro profundo donde descubrimos el inmenso amor de Cristo y fortalecemos nuestros lazos como jóvenes dispuestos a ser luz.",
+    descripcion: "Energía, dinámicas y reflexión. Un encuentro profundo donde descubrimos el amor de Cristo y fortalecemos nuestros lazos como jóvenes dispuestos a ser luz en el mundo.",
     fotoPortada: "/images/semad (1).jpg"
   },
   {
@@ -73,8 +73,19 @@ const EVENTOS = [
     totalFotos: 31,
     totalVideos: 4,
     mostrarEtiqueta: false,
-    descripcion: "El inicio de una nueva aventura en Cristo. Con los brazos abiertos y el corazón desbordando alegría, recibimos a la nueva generación de pandilleros tras vivir su Pandilla 1. ¡Aquí comienza su camino en esta gran familia!",
+    descripcion: "Recibimos con los brazos abiertos a la nueva generación tras su Pandilla 1. ¡Aquí comienza su camino en esta gran familia de fe!",
     fotoPortada: "/images/bienvenida (1).jpg"
+  },
+  {
+    id: "pandilla-1-historia",
+    titulo: "Pandilla 1: Nuestro Origen",
+    carpeta: "pandilla1",
+    prefijoVideo: "videopandilla1",
+    totalFotos: 49,
+    totalVideos: 0,
+    mostrarEtiqueta: false,
+    descripcion: "El retiro que marcó un antes y un después en nuestra historia. Con profundo amor atesoramos este momento en el que pasamos de ser 'Apostolitos de la Santa Cruz' a ser oficialmente 'Pandillas de la Santa Cruz', reconocidos por la Arquidiócesis de Guadalajara. Un agradecimiento inmenso a nuestros hermanos de Pandillas Tlajomulco; gracias por impulsarnos a unirnos como MPVC. ¡Sin su guía y apoyo no seríamos la gran familia que somos hoy!.",
+    fotoPortada: "/images/pandilla1 (1).jpg"
   }
 ];
 
@@ -101,7 +112,7 @@ export default function Galeria() {
             NUESTROS MOMENTOS
           </h1>
           <p className="text-xl text-white/60">
-            Cada imagen es un testimonio de nuestra fe y la alegría de ser jóvenes en Cristo.
+            Cada imagen es un testimonio de nuestra fe y la alegría de ser jóvenes en Cristo de El Salto.
           </p>
         </header>
 
@@ -120,7 +131,6 @@ export default function Galeria() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent"></div>
               <div className="absolute bottom-0 p-8 w-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                {/* Aquí está la magia del interruptor del letrero */}
                 {evento.mostrarEtiqueta && (
                   <span className="text-secondary font-bold uppercase tracking-widest text-xs mb-2 block">Evento Reciente</span>
                 )}
@@ -134,7 +144,7 @@ export default function Galeria() {
         </div>
       </main>
 
-      {/* MODAL DEL EVENTO (Ventanita que se abre) */}
+      {/* MODAL DEL EVENTO */}
       {eventoSeleccionado && (
         <div className="fixed inset-0 z-[60] bg-black overflow-y-auto pt-20">
           <button 
@@ -149,7 +159,6 @@ export default function Galeria() {
             <p className="max-w-2xl mx-auto text-lg text-white/60 mb-12">{eventoSeleccionado.descripcion}</p>
 
             <div className="columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
-              {/* Loop inteligente para los videos */}
               {Array.from({ length: eventoSeleccionado.totalVideos }).map((_, i) => (
                 <div 
                   key={`v-${i}`}
@@ -161,14 +170,9 @@ export default function Galeria() {
                       <Play className="w-6 h-6 text-black fill-current" />
                     </div>
                   </div>
-                  <video 
-                    src={`/images/${eventoSeleccionado.prefijoVideo} (${i+1}).mp4`} 
-                    className="w-full opacity-40" 
-                  />
+                  <video src={`/images/${eventoSeleccionado.prefijoVideo} (${i+1}).mp4`} className="w-full opacity-40" />
                 </div>
               ))}
-
-              {/* Loop inteligente para las fotos */}
               {Array.from({ length: eventoSeleccionado.totalFotos }).map((_, i) => (
                 <img 
                   key={`f-${i}`}
@@ -183,7 +187,7 @@ export default function Galeria() {
         </div>
       )}
 
-      {/* VISOR DE PANTALLA COMPLETA */}
+      {/* VISOR PANTALLA COMPLETA */}
       {archivoAbierto && (
         <div className="fixed inset-0 z-[100] bg-black/95 backdrop-blur-xl flex items-center justify-center p-4">
           <button onClick={() => setArchivoAbierto(null)} className="absolute top-6 right-6 text-white/50 hover:text-white">
