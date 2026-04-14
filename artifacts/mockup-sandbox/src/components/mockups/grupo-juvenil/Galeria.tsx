@@ -20,7 +20,16 @@ const EVENTOS = [
     descripcion: "Un momento hermoso de conexión con el Señor. Vivimos Su Pasión, Muerte y Resurrección con el corazón lleno de felicidad, cantos y bailes que desbordaban alegría pura.",
     fotoPortada: "/images/nochepascual (1).jpg"
   },
-  // Aquí iremos agregando más eventos conforme los tengas listos, brooo
+  {
+    id: "familia-pandillas",
+    titulo: "Familia Pandillas",
+    carpeta: "familia",
+    prefijoVideo: "videofamilia",
+    totalFotos: 138,
+    totalVideos: 5,
+    descripcion: "Más que un grupo, somos una verdadera familia en Cristo. Aquí guardamos las risas, las convivencias, las fiestas y esos momentos inolvidables donde compartimos la alegría de estar juntos.",
+    fotoPortada: "/images/familia (1).jpg"
+  }
 ];
 
 export default function Galeria() {
