@@ -17,6 +17,7 @@ const EVENTOS = [
     prefijoVideo: "videopascua",
     totalFotos: 43,
     totalVideos: 4,
+    mostrarEtiqueta: true, // A este sí le sale el letrero amarillo
     descripcion: "Un momento hermoso de conexión con el Señor. Vivimos Su Pasión, Muerte y Resurrección con el corazón lleno de felicidad, cantos y bailes que desbordaban alegría pura.",
     fotoPortada: "/images/nochepascual (1).jpg"
   },
@@ -27,8 +28,20 @@ const EVENTOS = [
     prefijoVideo: "videofamilia",
     totalFotos: 138,
     totalVideos: 5,
+    mostrarEtiqueta: false, // A este NO le sale el letrero amarillo
     descripcion: "Más que un grupo, somos una verdadera familia en Cristo. Aquí guardamos las risas, las convivencias, las fiestas y esos momentos inolvidables donde compartimos la alegría de estar juntos.",
     fotoPortada: "/images/familia (1).jpg"
+  },
+  {
+    id: "pandilla-num-2",
+    titulo: "Pandilla Num. 2",
+    carpeta: "pandilla2",
+    prefijoVideo: "videopandilla2",
+    totalFotos: 21,
+    totalVideos: 0,
+    mostrarEtiqueta: false, // A este NO le sale el letrero amarillo
+    descripcion: "Un evento muy especial y reservado. No podemos contarles mucho por aquí, pero es una experiencia profundamente transformadora, llena de amor, grandes enseñanzas y un encuentro inolvidable con Cristo.",
+    fotoPortada: "/images/pandilla2 (1).jpg"
   }
 ];
 
@@ -74,7 +87,10 @@ export default function Galeria() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent"></div>
               <div className="absolute bottom-0 p-8 w-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                <span className="text-secondary font-bold uppercase tracking-widest text-xs mb-2 block">Evento Reciente</span>
+                {/* Aquí está la magia del interruptor del letrero */}
+                {evento.mostrarEtiqueta && (
+                  <span className="text-secondary font-bold uppercase tracking-widest text-xs mb-2 block">Evento Reciente</span>
+                )}
                 <h3 className="text-3xl font-black mb-2">{evento.titulo}</h3>
                 <p className="text-white/60 text-sm line-clamp-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
                   {evento.descripcion}
