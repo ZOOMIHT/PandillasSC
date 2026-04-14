@@ -64,6 +64,17 @@ const EVENTOS = [
     mostrarEtiqueta: false,
     descripcion: "Una experiencia inolvidable llena de energía, dinámicas y reflexión. Un encuentro profundo donde descubrimos el inmenso amor de Cristo y fortalecemos nuestros lazos como jóvenes dispuestos a ser luz.",
     fotoPortada: "/images/semad (1).jpg"
+  },
+  {
+    id: "bienvenida-pandilleros",
+    titulo: "Bienvenida Pandilleros",
+    carpeta: "bienvenida",
+    prefijoVideo: "videobienvenida",
+    totalFotos: 31,
+    totalVideos: 4,
+    mostrarEtiqueta: false,
+    descripcion: "El inicio de una nueva aventura en Cristo. Con los brazos abiertos y el corazón desbordando alegría, recibimos a la nueva generación de pandilleros tras vivir su Pandilla 1. ¡Aquí comienza su camino en esta gran familia!",
+    fotoPortada: "/images/bienvenida (1).jpg"
   }
 ];
 
