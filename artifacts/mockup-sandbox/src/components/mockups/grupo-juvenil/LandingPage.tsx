@@ -396,12 +396,14 @@ export function LandingPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-6 max-w-5xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-6 max-w-7xl mx-auto">
             {[
               { name: "Danna Grimaldo", role: "Coordinadora", exp: "Coordinadora General del grupo", initials: "DG" },
               { name: "Jorge Misael", role: "Subcoordinador", exp: "Subcoordinador del grupo", initials: "JM" },
               { name: "Susana Sarahí", role: "Secretaria", exp: "Secretaria del grupo", initials: "SS" },
-              { name: "Tamara Rodríguez", role: "Tesorera", exp: "Tesorera del grupo", initials: "TR" },
+              { name: "Marlene Salazar", role: "Tesorera", exp: "Tesorera del grupo", initials: "MS" },
+              { name: "Tamara Rodríguez", role: "Logística y Operación", exp: "Apoyo de Coordinación", initials: "TR" },
+              { name: "José Luis Pérez", role: "Logística y Operación", exp: "Apoyo de Coordinación", initials: "JP" },
               { name: "Pbro. Pedro Martínez", role: "Asesor Espiritual", exp: "Vicario de la parroquia", initials: "PM" }
             ].map((leader, i) => (
               <div key={i} className="flex flex-col items-center text-center group">
