@@ -398,13 +398,13 @@ export function LandingPage() {
 
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-6 max-w-7xl mx-auto">
             {[
-              { name: "Danna Grimaldo", role: "Coordinadora", exp: "Coordinadora General del grupo", initials: "DG" },
-              { name: "Jorge Misael", role: "Subcoordinador", exp: "Subcoordinador del grupo", initials: "JM" },
+              { name: "Jorge Misael", role: "Coordinador", exp: "Coordinador General del grupo", initials: "JM" },
+              { name: "José Luis Pérez", role: "Subcoordinador", exp: "Subcoordinador del grupo", initials: "JP" },
               { name: "Susana Sarahí", role: "Secretaria", exp: "Secretaria del grupo", initials: "SS" },
-              { name: "Marlene Salazar", role: "Tesorera", exp: "Tesorera del grupo", initials: "MS" },
+              { name: "Donají Mercado", role: "Tesorera", exp: "Tesorera del grupo", initials: "DM" },
               { name: "Tamara Rodríguez", role: "Logística y Operación", exp: "Apoyo de Coordinación", initials: "TR" },
-              { name: "José Luis Pérez", role: "Logística y Operación", exp: "Apoyo de Coordinación", initials: "JP" },
-              { name: "Pbro. Pedro Martínez", role: "Asesor Espiritual", exp: "Vicario de la parroquia", initials: "PM" }
+              { name: "Marlene Salazar", role: "Logística y Operación", exp: "Apoyo de Coordinación", initials: "MS" },
+              { name: "Pbro. Juan Diego", role: "Asesor Espiritual", exp: "Vicario de la parroquia", initials: "JD" }
             ].map((leader, i) => (
               <div key={i} className="flex flex-col items-center text-center group">
                 <div className="w-24 h-24 rounded-full overflow-hidden mb-4 border-4 border-white shadow-xl group-hover:border-secondary transition-colors relative bg-primary/10 flex items-center justify-center">
